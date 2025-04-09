@@ -116,8 +116,8 @@
 </head>
 <body>
     <div class="edit-profile-container">
-        <h2><i class="fa-solid fa-user-pen"></i> Edit Profile</h2>
-        <form action="UpdateProfileServlet" method="post">
+        <h2><a href="/edit"><i class="fa-solid fa-user-pen"></i> Edit Profile</h2>
+        <form action="/edit" method="Post">
             <input type="text" name="FullName" placeholder="Full Name" required>
             <input type="text" name="phoneNumber" placeholder="Phone Number" required>
             <input type="email" name="Email" placeholder="Email Address" required>
@@ -127,7 +127,7 @@
             <button type="submit" class="btn"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
         </form>
         <div class="back-link">
-            <a href="dashboard.jsp"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a>
+            <a href="/dashboard"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a>
         </div>
     </div>
 </body>

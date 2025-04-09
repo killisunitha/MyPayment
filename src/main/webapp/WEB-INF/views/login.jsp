@@ -188,10 +188,9 @@ nav .brand i {
         <div class="nav-container">
             <div class="brand"><i class="fa-solid fa-credit-card"></i>Payment App</div>
             <ul>
-                <li><a href="welcome.jsp">Home</a></li>
-                <li><a href="registration.jsp">Register</a></li>
-                <li><a href="welcome.jsp">Sign In</a></li>
-                <li><a href="/aboutus">About Us</a></li>
+                <li><a href="/login">Home</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Sign In</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
         </div>

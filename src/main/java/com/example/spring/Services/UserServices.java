@@ -17,7 +17,11 @@ public class UserServices {
 	public UserDetailsEntity autenticateUser(String userName ,String password) {
 			return userRepo.findByUserNameAndPassword(userName, password);		
 		}
-		
+	public Optional<UserDetailsEntity> getUserByuserName(String userName) {
+		return userRepo.findByUserName(userName);
 	}
+}
+	
+	
 
 

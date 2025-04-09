@@ -24,54 +24,7 @@
             text-align: center;
             padding: 20px;
         }
-         nav {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(12px);
-        }
-        nav .nav-container {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 30px;
-        }
-        nav .brand {
-    font-size: 36px;
-    font-weight: 800;
-    color: #a855f7;
-    display: flex;
-    align-items:none;
-    gap: 10px; /* Space between icon and text */
-}
-
-/* Adjust icon size */
-nav .brand i {
-    font-size: 40px;
-    
-}
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 40px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        nav ul li a:hover {
-            color: #d8b4fe;
-        }
-
+         
         /* Glassmorphic Container */
         .container {
             width: 400px;
@@ -181,18 +134,6 @@ nav .brand i {
     </style>
 </head>
 <body>
-<nav>
-        <div class="nav-container">
-            <div class="brand"><i class="fa-solid fa-credit-card"></i>Payment App</div>
-            <ul>
-                <li><a href="/login">Home</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/login">Sign In</a></li>
-                <li><a href="/aboutus">About Us</a></li>
-                <li><a href="/logout">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
     <div class="container">
         <h2>Create Your Account</h2>
 

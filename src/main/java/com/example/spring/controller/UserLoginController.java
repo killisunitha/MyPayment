@@ -21,25 +21,22 @@ public class UserLoginController {
 		return "login";
 	 }
 	@PostMapping("/login")
-		public String loginValidation(@RequestParam("userName") String userName,
-	            @RequestParam("password") String password,
-	            HttpSession session) 
-	{
-			UserDetailsEntity loggedInUser=userServices.autenticateUser(userName,password);
-			
-			if(loggedInUser!=null) 
-			{
-				session.setAttribute(userName,password);
-				
-				System.out.println("login successfull");
-				 return "dashboard";
-				
-			}
-			else 
-			{
-				System.out.println("login not successfull");
-				return "login";
-			}
-			
-		}
+	public String loginValidation(@RequestParam("userName") String userName,
+	                              @RequestParam("password") String password,
+	                              HttpSession session) {
+	    UserDetailsEntity loggedInUser = userServices.autenticateUser(userName, password);
+
+	    if (loggedInUser != null) {
+	        
+	        session.setAttribute("userName", loggedInUser.getUserName());
+
+	        System.out.println("Login successful for: " + loggedInUser.getUserName());
+
+	        return "redirect:/dashboard";
+	    } else {
+	        System.out.println("Login failed for username: " + userName);
+	        return "login";
+	    }
+	}
+
 }
