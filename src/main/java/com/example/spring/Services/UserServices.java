@@ -20,6 +20,7 @@ public class UserServices {
 	public Optional<UserDetailsEntity> getUserByuserName(String userName) {
 		return userRepo.findByUserName(userName);
 	}
+
 }
 	
 	

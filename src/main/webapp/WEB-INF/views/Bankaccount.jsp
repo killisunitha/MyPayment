@@ -150,11 +150,11 @@
         <div class="bank-accounts-container">
             <!-- Example Bank Box 1 -->
             <div class="bank-box">
-                <p>BANK NAME</p>
+                <p>BANK NAME:STATE BANK</p>
                 <p>Bank Acct No: 1234</p>
                 <p>Balance:</p>
-                <p>IFSC Code:</p>
-                <p>Branch:</p>
+                <p>IFSC Code:8095</p>
+                <p>Branch:MURALINAGAR</p>
                 <a href="#" class="edit-link">Edit</a>
             </div>
             <!-- Example Bank Box 2 -->
@@ -177,7 +177,8 @@
             </div>
             <!-- Add Bank Account Box -->
             <div class="add-box">
-                <a href="/bankaccount">+</a>
+            <form> <a href="/accountadd">+</a></form>
+              
             </div>
         </div>
     </div>

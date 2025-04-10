@@ -12,5 +12,6 @@ public interface userDetails extends JpaRepository<UserDetailsEntity,Long>{
 	 public UserDetailsEntity findByUserNameAndPassword(String userName,String password);
 
 	public Optional<UserDetailsEntity> findByUserName(String userName);
+	public Optional<UserDetailsEntity> findById(long userId);
 
 }

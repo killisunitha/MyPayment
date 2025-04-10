@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
 import com.example.spring.Entity.UserDetailsEntity;
 import com.example.spring.Services.UserServices;
 import jakarta.servlet.http.HttpSession;
@@ -15,6 +17,11 @@ public class DashboardController {
 	@Autowired
 	public UserServices userServices;
 @GetMapping("/dashboard")
+public String viewBankAccounts() {
+	System.out.println("your Bank Accounts");
+	return "AddBankAccount";
+}
+@PostMapping("/accountadd")
 public String showDashBoardPage(HttpSession session, Model model) {
     String userName = (String) session.getAttribute("userName");
 

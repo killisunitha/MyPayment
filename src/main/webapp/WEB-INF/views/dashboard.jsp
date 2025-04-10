@@ -19,8 +19,8 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0d0d0d, #290a37);
-            color: white;
+            background: #f4f6f8; /* Light background */
+            color: #333; /* Dark text */
             overflow-x: hidden;
         }
 
@@ -40,21 +40,20 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 20px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(8px);
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
         }
 
         header h1 {
             font-size: 24px;
-            color: #a855f7;
+            color: #6a0dad;
         }
 
         nav {
             grid-area: sidebar;
-            background: rgba(255, 255, 255, 0.08);
+            background: #ffffff;
             padding: 20px;
-            backdrop-filter: blur(12px);
-            border-right: 1px solid rgba(255, 255, 255, 0.15);
+            border-right: 1px solid #ddd;
         }
 
         nav ul {
@@ -67,7 +66,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: white;
+            color: #555;
             font-size: 16px;
             display: flex;
             align-items: center;
@@ -75,7 +74,7 @@
         }
 
         nav ul li a:hover {
-            color: #d8b4fe;
+            color: #6a0dad;
             transform: translateX(5px);
         }
 
@@ -85,57 +84,63 @@
 
         main {
             grid-area: main;
-            padding: 20px;
+            padding: 30px;
             overflow-y: auto;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 20px;
-            border-radius: 15px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0px 10px 30px rgba(128, 0, 128, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
             margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0px 8px 20px rgba(106, 13, 173, 0.2);
         }
 
         .card h2 {
-            color: #a855f7;
-            margin-bottom: 10px;
+            color: #6a0dad;
+            margin-bottom: 15px;
             font-size: 20px;
         }
 
         .card p {
             font-size: 14px;
-            color: rgba(255, 255, 255, 0.9);
+            color: #666;
+            margin-bottom: 8px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         table th, table td {
-            padding: 10px;
+            padding: 12px 10px;
             text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid #ddd;
         }
 
         table th {
-            color: #a855f7;
+            color: #6a0dad;
+            font-weight: 600;
         }
 
         table td {
-            color: rgba(255, 255, 255, 0.8);
+            color: #555;
         }
 
         .btn {
             display: inline-block;
-            padding: 10px 15px;
+            padding: 10px 20px;
             border: none;
             border-radius: 8px;
-            background: linear-gradient(135deg, #7b2cbf, #4c1d95);
+            background: #6a0dad;
             color: white;
             font-size: 14px;
             font-weight: bold;
@@ -145,8 +150,7 @@
         }
 
         .btn:hover {
-            background: linear-gradient(135deg, #4c1d95, #7b2cbf);
-            box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+            background: #50107e;
             transform: scale(1.05);
         }
 
@@ -179,29 +183,29 @@
                 <li><a href="/bankaccount"><i class="fa-solid fa-building-columns"></i> Bank Accounts</a></li>
                 <li><a href="/sendmoney"><i class="fa-solid fa-paper-plane"></i> Send Money</a></li>
                 <li><a href="/statementdetails"><i class="fa-solid fa-file-invoice"></i> Statements</a></li>
-                <li><a href="/logout" style="color: #f87171;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                <li><a href="/login" style="color: #e63946;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
             </ul>
         </nav>
 
         <!-- Main Content -->
         <main>
-            <!-- User Info -->
-              
-	   <div class="card">
-		<p>Welcome ${user.fullName} </p>
-		<p>Name : ${user.phoneNumber}</p>
-		<p>Email : ${user.email }</p>
-		<p>Address: ${user.address}</p>
-		<form action="dashboard">
-		<button class="plus-button">Edit</button>
-		</form>
-	    </div>
-
             <!-- Primary Bank Account -->
             <div class="card">
                 <h2><i class="fa-solid fa-building-columns"></i> Primary Bank Account</h2>
                 <p>Account No: ****1234</p>
                 <p>Balance: $5,000</p>
+            </div>
+
+            <!-- User Info (Profile) -->
+            <div class="card">
+                <h2><i class="fa-solid fa-user-circle"></i> Profile</h2>
+                <p>Welcome ${user.fullName}</p>
+                <p>Phone: ${user.phoneNumber}</p>
+                <p>Email: ${user.email}</p>
+                <p>Address: ${user.address}</p>
+                <form action="dashboard">
+                    <a href="addMoney.jsp" class="btn"><i class="fa-solid fa-pen"></i> Edit Profile</a>
+                </form>
             </div>
 
             <!-- Wallet -->
@@ -223,12 +227,12 @@
                     <tr>
                         <td>2025-03-20</td>
                         <td><i class="fa-solid fa-arrow-up"></i> Sent to Hema</td>
-                        <td>-$1,000</td>
+                        <td style="color: red;">-$1,000</td>
                     </tr>
                     <tr>
                         <td>2025-03-19</td>
                         <td><i class="fa-solid fa-arrow-down"></i> Received from Akhila</td>
-                        <td>+$1,300</td>
+                        <td style="color: green;">+$1,300</td>
                     </tr>
                 </table>
                 <a href="Statementdetails.jsp" class="btn">View Detailed Statement</a>

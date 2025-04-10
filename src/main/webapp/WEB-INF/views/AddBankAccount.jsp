@@ -124,7 +124,7 @@
     <div class="container">
         <h2>Add Bank Account</h2>
 
-        <form action="/bankaccount" method="get">
+        <form action="/accountadd" method="get">
             <div class="form-group">
                 <label>Bank Name:</label>
                 <input type="text" name="bankName" required>
