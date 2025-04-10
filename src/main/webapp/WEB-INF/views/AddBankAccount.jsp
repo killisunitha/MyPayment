@@ -130,15 +130,15 @@
                 <input type="text" name="bankName" required>
             </div>
 
-            <div class="form-group">
-                <label>Account Number:</label>
-                <input type="text" name="accountNumber" required>
+<div class="form-group">
+                <label>Branch Name:</label>
+                <input type="text" name="branchName" required>
             </div>
 
             <div class="form-group">
-                <label>Account Type:</label>
-                <input type="text" name="accountType" required>
-            </div>
+                <label>Account Number:</label>
+                <input type="text" name="bankAccountId" required>
+            </div>>
 
             <div class="form-group">
                 <label>IFSC Code:</label>
@@ -147,7 +147,7 @@
 
             <div class="form-group">
                 <label>Current Balance:</label>
-                <input type="number" name="balance" required>
+                <input type="number" name="bankBalance" required>
             </div>
 
             <div class="form-group">

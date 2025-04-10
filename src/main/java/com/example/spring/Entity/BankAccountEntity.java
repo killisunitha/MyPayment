@@ -14,7 +14,7 @@ public class BankAccountEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="bank_account_id")
-	private String bankAccountId;
+	private Long bankAccountId;
 	@Column(name="bank_name")
 	private String bankName;
 	@Column(name="branch_name")
@@ -28,10 +28,11 @@ public class BankAccountEntity {
 	@ManyToOne
 	@JoinColumn(name="user_Id",nullable=false)
 	private UserDetailsEntity user;
-	public String getBankAccountId() {
+
+	public Long getBankAccountId() {
 		return bankAccountId;
 	}
-	public void setBankAccountId(String bankAccountId) {
+	public void setBankAccountId(Long bankAccountId) {
 		this.bankAccountId = bankAccountId;
 	}
 	public String getBankName() {

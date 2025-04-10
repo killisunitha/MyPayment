@@ -199,11 +199,11 @@
             <!-- User Info (Profile) -->
             <div class="card">
                 <h2><i class="fa-solid fa-user-circle"></i> Profile</h2>
-                <p>Welcome ${user.fullName}</p>
+                <p>Welcome ${user.userName}</p>
                 <p>Phone: ${user.phoneNumber}</p>
                 <p>Email: ${user.email}</p>
                 <p>Address: ${user.address}</p>
-                <form action="dashboard">
+                <form action="/dashboard">
                     <a href="addMoney.jsp" class="btn"><i class="fa-solid fa-pen"></i> Edit Profile</a>
                 </form>
             </div>

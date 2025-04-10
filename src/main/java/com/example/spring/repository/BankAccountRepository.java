@@ -11,11 +11,7 @@ import com.example.spring.Entity.UserDetailsEntity;
 
 @Repository
 	public interface BankAccountRepository extends JpaRepository<BankAccountEntity, Long> {
+	List<BankAccountEntity> findByUser(UserDetailsEntity user);
 	    
-	    // Custom query to get all bank accounts for a specific user
-	    List<BankAccountEntity> findByUser(UserDetailsEntity user);
-	    Optional<UserDetailsEntity> findByUser_Username(Long userId);
-
-
 	}
 
