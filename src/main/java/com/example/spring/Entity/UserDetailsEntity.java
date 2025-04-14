@@ -2,14 +2,17 @@ package com.example.spring.Entity;
 
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
+//import java.util.List;
+
+//import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+//import jakarta.persistence.OneToMany;
+//import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -33,10 +36,15 @@ public class UserDetailsEntity {
 	private String password;
 	@Column(name="confirm_password")
 	private String confirmPassword;
+<<<<<<< HEAD
 
 	/*
 	 * @OneToMany(mappedBy = "user") private List<BankAccountEntity> bankAccounts;
 	 */
+=======
+   @OneToMany(mappedBy = "user")
+    private List<BankAccountEntity> bankAccounts;
+>>>>>>> d9d97a79ce8ee72f32d1b4319f74a8545a22ba75
 	public int getUserId() {
 		return userId;
 	}

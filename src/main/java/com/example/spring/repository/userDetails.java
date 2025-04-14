@@ -13,5 +13,10 @@ public interface userDetails extends JpaRepository<UserDetailsEntity,Integer>{
 
 	public Optional<UserDetailsEntity> findByUserName(String userName);
 	//public Optional<UserDetailsEntity> findById(long userId);
+<<<<<<< HEAD
+=======
+
+	public UserDetailsEntity findByUsername(String username);
+>>>>>>> d9d97a79ce8ee72f32d1b4319f74a8545a22ba75
 
 }

@@ -20,10 +20,17 @@ public class UserServices {
 	public Optional<UserDetailsEntity> getUserByuserName(String userName) {
 		return userRepo.findByUserName(userName);
 	}
+<<<<<<< HEAD
 	public UserDetailsEntity getUserById(int userId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+=======
+	
+	//public UserDetailsEntity getUserByuserName(String userName) {
+		//return userRepo.findByUserName(userName);
+	//}
+>>>>>>> d9d97a79ce8ee72f32d1b4319f74a8545a22ba75
 
 }
 	

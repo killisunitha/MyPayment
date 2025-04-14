@@ -20,10 +20,13 @@ public class DashboardController {
 @GetMapping("/dashboard")
 public String showDashBoardPage(HttpSession session, Model model) {
     String userName = (String) session.getAttribute("userName");
+<<<<<<< HEAD
 
     if (StringUtils.hasText(userName)){
+=======
+    if(StringUtils.hasText(userName)) {
+>>>>>>> d9d97a79ce8ee72f32d1b4319f74a8545a22ba75
         Optional<UserDetailsEntity> profiledetails = userServices.getUserByuserName(userName);
-
         if (profiledetails.isPresent()) {
             UserDetailsEntity user = profiledetails.get();
             session.setAttribute("user", user); 
