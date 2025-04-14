@@ -180,7 +180,7 @@
         <nav>
             <ul>
                 <li><a href="/dashboard"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-                <li><a href="/bankaccount"><i class="fa-solid fa-building-columns"></i> Bank Accounts</a></li>
+                <li><a href="/addnewbankaccount"><i class="fa-solid fa-building-columns"></i> Bank Accounts</a></li>
                 <li><a href="/sendmoney"><i class="fa-solid fa-paper-plane"></i> Send Money</a></li>
                 <li><a href="/statementdetails"><i class="fa-solid fa-file-invoice"></i> Statements</a></li>
                 <li><a href="/login" style="color: #e63946;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>

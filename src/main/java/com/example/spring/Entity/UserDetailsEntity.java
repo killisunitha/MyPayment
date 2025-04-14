@@ -34,8 +34,9 @@ public class UserDetailsEntity {
 	@Column(name="confirm_password")
 	private String confirmPassword;
 
-    @OneToMany(mappedBy = "user")
-    private List<BankAccountEntity> bankAccounts;
+	/*
+	 * @OneToMany(mappedBy = "user") private List<BankAccountEntity> bankAccounts;
+	 */
 	public int getUserId() {
 		return userId;
 	}
